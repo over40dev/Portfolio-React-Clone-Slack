@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
 import Header from './app/components/Header';
+import Sidebar from './app/components/Sidebar';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <>
           <Header />
           <AppBody>
+            <Sidebar/>
             <Switch>
               <Route path="/" exact></Route>
             </Switch>
@@ -23,4 +25,7 @@ function App() {
 
 export default App;
 
-const AppBody = styled.div``;
+const AppBody = styled.div`
+display: flex;
+height: 100vh;
+`;
