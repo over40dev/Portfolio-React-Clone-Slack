@@ -9,7 +9,9 @@ import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import AppsIcon from '@material-ui/icons/Apps';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
-import ExpendLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AddIcon from '@material-ui/icons/Add';
 import SidebarOption from './SidebarOption';
 
 function Sidebar() {
@@ -32,7 +34,17 @@ function Sidebar() {
       <SidebarOption Icon={PeopleAltIcon} title="People & User Groups"/>
       <SidebarOption Icon={AppsIcon} title="Apps"/>
       <SidebarOption Icon={FileCopyIcon} title="File Browser"/>
-      <SidebarOption Icon={ExpendLessIcon} title="Show Less"/>
+      <SidebarOption title="Cogentx Browser"/>
+      <SidebarOption Icon={ExpandLessIcon} title="Show Less"/>
+
+      <hr />
+      <SidebarOption Icon={ExpandMoreIcon} title="Channels"/>
+
+      <hr />
+
+      <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel"/>
+
+
 
     </SidebarContainer>
   );
@@ -48,6 +60,12 @@ const SidebarContainer = styled.div`
   border-top: 1px solid var(----brand-color-accent);
   max-width: 260px;
   margin-top: 60px;
+
+  > hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var( --slack-color-accent);
+  }
 `;
 
 const SidebarHeader = styled.div`
